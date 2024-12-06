@@ -10,7 +10,7 @@ const useSignup = () => {
     setIsloading(true);
     setError(null);
 
-    const response = await fetch("/api/user/signup", {
+    const response = await fetch(`${import.meta.env.BACKEND_URL}/api/user/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

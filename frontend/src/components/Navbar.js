@@ -19,7 +19,8 @@ const Navbar = () => {
         <nav>
           {user && (
             <div>
-              <span>{user.email}</span>
+              {console.log(user)}
+              <span>{user.name}</span>
               <button onClick={handleClick}>Log out</button>
             </div>
           )}

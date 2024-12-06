@@ -6,7 +6,7 @@ const useSignup = () => {
   const [isLoading, setIsloading] = useState(null);
   const { dispatch } = useAuthContext();
 
-  const signup = async (email, password) => {
+  const signup = async (name, email, password) => {
     setIsloading(true);
     setError(null);
 
@@ -15,7 +15,7 @@ const useSignup = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ name, email, password }),
     });
 
     const json = await response.json();
